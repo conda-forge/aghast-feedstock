@@ -1,13 +1,13 @@
 {% set name = "aghast" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/diana-hep/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: f1a1a337f692f75c1f8f664be0cddf71ca2bad8e20e490cd87ac9dac3f283568
+  url: https://github.com/scikit-hep/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: 4bfd44e56d111da173bf32bf83cc4f3b10b55ded0f6c2300b3e990da825eb13e
 
 build:
   noarch: python
