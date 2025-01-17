@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install ./python --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - pytest-runner
   run:
-    - python
+    - python >={{ python_min }}
     - python-flatbuffers >=1.8.0
     - numpy
 
@@ -29,6 +29,7 @@ test:
     - python/tests
   requires:
     - pytest
+    - python {{ python_min }}
   imports:
     - aghast
   commands:
